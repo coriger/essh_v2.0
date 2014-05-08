@@ -155,8 +155,9 @@ public class TreeNode implements Serializable {
 		return id;
 	}
 
-	public void setId(String id) {
+	public TreeNode setId(String id) {
 		this.id = id;
+        return this;
 	}
 
 	/**
@@ -166,8 +167,9 @@ public class TreeNode implements Serializable {
 		return text;
 	}
 
-	public void setText(String text) {
+	public TreeNode setText(String text) {
 		this.text = text;
+        return this;
 	}
 
 	/**
@@ -177,8 +179,9 @@ public class TreeNode implements Serializable {
 		return checked;
 	}
 
-	public void setChecked(Boolean checked) {
+	public TreeNode setChecked(Boolean checked) {
 		this.checked = checked;
+        return this;
 	}
 
 	/**
@@ -188,8 +191,9 @@ public class TreeNode implements Serializable {
 		return attributes;
 	}
 
-	public void setAttributes(Map<String, Object> attributes) {
+	public TreeNode setAttributes(Map<String, Object> attributes) {
 		this.attributes = attributes;
+        return this;
 	}
 
 	/**
@@ -199,8 +203,9 @@ public class TreeNode implements Serializable {
 		return children;
 	}
 
-	public void setChildren(List<TreeNode> children) {
+	public TreeNode setChildren(List<TreeNode> children) {
 		this.children = children;
+        return this;
 	}
 
 	/**
@@ -210,8 +215,9 @@ public class TreeNode implements Serializable {
 		return state;
 	}
 
-	public void setState(String state) {
+	public TreeNode setState(String state) {
 		this.state = state;
+        return this;
 	}
 
 	/**
@@ -221,8 +227,9 @@ public class TreeNode implements Serializable {
 		return iconCls;
 	}
 
-	public void setIconCls(String iconCls) {
+	public TreeNode setIconCls(String iconCls) {
 		this.iconCls = iconCls;
+        return this;
 	}
 	
 	@Override

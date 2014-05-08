@@ -85,8 +85,9 @@ public class Datagrid<T> implements Serializable {
 	 * @param total
 	 *            总记录数
 	 */
-	public void setTotal(long total) {
+	public Datagrid<T> setTotal(long total) {
 		this.total = total;
+        return this;
 	}
 
 	/**
@@ -102,8 +103,9 @@ public class Datagrid<T> implements Serializable {
 	 * @param rows
 	 *            列表行
 	 */
-	public void setRows(List<T> rows) {
+	public Datagrid<T> setRows(List<T> rows) {
 		this.rows = rows;
+        return this;
 	}
 
 	/**
@@ -119,8 +121,9 @@ public class Datagrid<T> implements Serializable {
 	 * @param footer
 	 *            脚列表
 	 */
-	public void setFooter(List<Map<String, Object>> footer) {
+	public Datagrid<T> setFooter(List<Map<String, Object>> footer) {
 		this.footer = footer;
+        return this;
 	}
 
 	/**
@@ -136,8 +139,9 @@ public class Datagrid<T> implements Serializable {
 	 * @param columns
 	 *            动态列
 	 */
-	public void setColumns(List<Column> columns) {
+	public Datagrid<T> setColumns(List<Column> columns) {
 		this.columns = columns;
+        return this;
 	}
 
 	@Override

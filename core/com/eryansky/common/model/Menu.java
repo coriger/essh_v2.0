@@ -66,8 +66,9 @@ public class Menu implements Serializable {
 		return id;
 	}
 
-	public void setId(String id) {
+	public Menu setId(String id) {
 		this.id = id;
+        return this;
 	}
 
 	/**
@@ -77,16 +78,18 @@ public class Menu implements Serializable {
 		return text;
 	}
 
-	public void setText(String text) {
+	public Menu setText(String text) {
 		this.text = text;
+        return this;
 	}
 
     public String getHref() {
         return href;
     }
 
-    public void setHref(String href) {
+    public Menu setHref(String href) {
         this.href = href;
+        return this;
     }
 
     /**
@@ -96,8 +99,9 @@ public class Menu implements Serializable {
 		return attributes;
 	}
 
-	public void setAttributes(Map<String, Object> attributes) {
+	public Menu setAttributes(Map<String, Object> attributes) {
 		this.attributes = attributes;
+        return this;
 	}
 
 	/**
@@ -107,8 +111,9 @@ public class Menu implements Serializable {
 		return children;
 	}
 
-	public void setChildren(List<Menu> children) {
+	public Menu setChildren(List<Menu> children) {
 		this.children = children;
+        return this;
 	}
 
 
@@ -119,8 +124,9 @@ public class Menu implements Serializable {
 		return iconCls;
 	}
 
-	public void setIconCls(String iconCls) {
+	public Menu setIconCls(String iconCls) {
 		this.iconCls = iconCls;
+        return this;
 	}
 	
 	@Override

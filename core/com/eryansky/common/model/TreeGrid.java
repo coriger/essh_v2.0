@@ -80,80 +80,90 @@ public class TreeGrid implements Serializable {
 		return operations;
 	}
 
-	public void setOperations(String operations) {
+	public TreeGrid setOperations(String operations) {
 		this.operations = operations;
+        return this;
 	}
 
 	public Map<String, Object> getAttributes() {
 		return attributes;
 	}
 
-	public void setAttributes(Map<String, Object> attributes) {
+	public TreeGrid setAttributes(Map<String, Object> attributes) {
 		this.attributes = attributes;
+        return this;
 	}
 
 	public String getParentText() {
 		return parentText;
 	}
 
-	public void setParentText(String parentText) {
+	public TreeGrid setParentText(String parentText) {
 		this.parentText = parentText;
+        return this;
 	}
 
 	public String getCode() {
 		return code;
 	}
 
-	public void setCode(String code) {
+	public TreeGrid setCode(String code) {
 		this.code = code;
+        return this;
 	}
 
 	public String getSrc() {
 		return src;
 	}
 
-	public void setSrc(String src) {
+	public TreeGrid setSrc(String src) {
 		this.src = src;
+        return this;
 	}
 
 	public String getNote() {
 		return note;
 	}
 
-	public void setNote(String note) {
+	public TreeGrid setNote(String note) {
 		this.note = note;
+        return this;
 	}
 
 	public String getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public TreeGrid setId(String id) {
 		this.id = id;
+        return this;
 	}
 
 	public String getText() {
 		return text;
 	}
 
-	public void setText(String text) {
+	public TreeGrid setText(String text) {
 		this.text = text;
+        return this;
 	}
 
 	public String getParentId() {
 		return parentId;
 	}
 
-	public void setParentId(String parentId) {
+	public TreeGrid setParentId(String parentId) {
 		this.parentId = parentId;
+        return this;
 	}
 
 	public String getState() {
 		return state;
 	}
 
-	public void setState(String state) {
+	public TreeGrid setState(String state) {
 		this.state = state;
+        return this;
 	}
 
 }

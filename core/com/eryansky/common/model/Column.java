@@ -65,8 +65,9 @@ public class Column {
 		return field;
 	}
 
-	public void setField(String field) {
+	public Column setField(String field) {
 		this.field = field;
+        return this;
 	}
 
 	/**
@@ -79,8 +80,9 @@ public class Column {
 	/**
 	 * 设置显示标题
 	 */
-	public void setTitle(String title) {
+	public Column setTitle(String title) {
 		this.title = title;
+        return this;
 	}
 
 	/**
@@ -93,8 +95,9 @@ public class Column {
 	/**
 	 * 设置宽度
 	 */
-	public void setWidth(Integer width) {
+	public Column setWidth(Integer width) {
 		this.width = width;
+        return this;
 	}
 
 	/**
@@ -107,8 +110,9 @@ public class Column {
 	/**
 	 * 设置跨行数
 	 */
-	public void setRowspan(Integer rowspan) {
+	public Column setRowspan(Integer rowspan) {
 		this.rowspan = rowspan;
+        return this;
 	}
 
 	/**
@@ -121,8 +125,9 @@ public class Column {
 	/**
 	 * 设置跨列数
 	 */
-	public void setColspan(Integer colspan) {
+	public Column setColspan(Integer colspan) {
 		this.colspan = colspan;
+        return this;
 	}
 
 	/**
@@ -135,8 +140,9 @@ public class Column {
 	/**
 	 * 设置是否选中
 	 */
-	public void setCheckbox(boolean checkbox) {
+	public Column setCheckbox(boolean checkbox) {
 		this.checkbox = checkbox;
+        return this;
 	}
 
 	/**
@@ -149,8 +155,9 @@ public class Column {
 	/**
 	 * 设置对齐方式(可选值：'left'，'right'，'center' 默认左对齐)
 	 */
-	public void setAlign(String align) {
+	public Column setAlign(String align) {
 		this.align = align;
+        return this;
 	}
 
 	/**
@@ -165,8 +172,9 @@ public class Column {
 	 * 
 	 * @param index
 	 */
-	public void setIndex(Integer index) {
+	public Column setIndex(Integer index) {
 		this.index = index;
+        return this;
 	}
 
 	@Override

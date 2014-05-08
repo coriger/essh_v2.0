@@ -94,8 +94,9 @@ public class Combobox {
      * 设置值域
      * @param value   文本域
      */
-	public void setValue(String value) {
+	public Combobox setValue(String value) {
 		this.value = value;
+        return this;
 	}
 
 	/**
@@ -109,8 +110,9 @@ public class Combobox {
      * 设置文本域
      * @param text   文本域
      */
-	public void setText(String text) {
+	public Combobox setText(String text) {
 		this.text = text;
+        return this;
 	}
 
 
@@ -126,8 +128,9 @@ public class Combobox {
      * 设置分组
      * @param group
      */
-    public void setGroup(String group) {
+    public Combobox setGroup(String group) {
         this.group = group;
+        return this;
     }
 
     /**
@@ -137,8 +140,9 @@ public class Combobox {
 		return selected;
 	}
 
-	public void setSelected(boolean selected) {
+	public Combobox setSelected(boolean selected) {
 		this.selected = selected;
+        return this;
 	}
 
 	@Override

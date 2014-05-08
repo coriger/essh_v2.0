@@ -39,16 +39,18 @@ public class Propertygrid implements Serializable {
         return rows;
     }
 
-    public void setRows(List<Map<String, Object>> rows) {
+    public Propertygrid setRows(List<Map<String, Object>> rows) {
         this.rows = rows;
+        return this;
     }
 
     public long getTotal() {
         return total;
     }
 
-    public void setTotal(long total) {
+    public Propertygrid setTotal(long total) {
         this.total = total;
+        return this;
     }
 
     @Override
