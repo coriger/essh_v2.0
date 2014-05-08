@@ -193,6 +193,7 @@
                         traditional:true,
                         success:function(data) {
                             if (data.code==1){
+                                $${entityInstance}_datagrid.datagrid('clearSelections');//取消所有的已选择项
                                 $${entityInstance}_datagrid.datagrid('load');	// reload the user data
                                 eu.showMsg(data.msg);//操作结果提示
                             } else {
