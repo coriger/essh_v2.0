@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * 提供公共方法的Action.
+ * 提供公共方法的Controller.
  *
  * @author 尔演&Eryan eryanwcp@gmail.com
  * @date 2013-2-25 下午1:59:38

@@ -46,7 +46,7 @@ import javax.transaction.SystemException;
 import java.util.List;
 
 /**
- * 用户User管理 Action层.
+ * 用户User管理 Controller层.
  *
  * @author 尔演&Eryan eryanwcp@gmail.com
  * @date 2013-3-21 上午12:20:13

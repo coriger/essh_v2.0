@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 角色Role管理 Action层.
+ * 角色Role管理 Controller层.
  *
  * @author 尔演&Eryan eryanwcp@gmail.com
  * @date 2012-10-11 下午4:36:24

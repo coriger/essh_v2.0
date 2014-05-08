@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * 数据字典Dictionary管理 Action层.
+ * 数据字典Dictionary管理 Controller层.
  *
  * @author 尔演&Eryan eryanwcp@gmail.com
  * @date 2012-10-11 下午4:36:24

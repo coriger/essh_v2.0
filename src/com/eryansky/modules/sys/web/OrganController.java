@@ -41,7 +41,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * 机构Organ管理 Action层.
+ * 机构Organ管理 Controller层.
  *
  * @author 尔演&Eryan eryanwcp@gmail.com
  * @date 2013-09-09 下午21:36:24

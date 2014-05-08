@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * bug管理Action层.
+ * bug管理Controller层.
  *
  * @author 尔演&Eryan eryanwcp@gmail.com
  * @date 2013-3-27 下午8:02:39
