@@ -60,10 +60,6 @@ $(function() {
         },
         onDblClickRow:function(row){
             edit(row);
-        },
-        onLoadSuccess:function(){
-            //表头居中
-            //eu.datagridHeaderCenter();
         }
     }).datagrid('showTooltip');
 
@@ -115,7 +111,7 @@ function showDialog(row){
         inputUrl = inputUrl+"?id="+row.id;
     }else{
         var selectedNode = resource_treegrid.treegrid('getSelected');
-        if(selectedNode){
+        if(selectedNode != undefined && selectedNode.type != undefined){
             inputUrl +="?parentType="+selectedNode.type;
         }
     }

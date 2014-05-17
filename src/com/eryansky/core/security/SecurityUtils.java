@@ -10,6 +10,7 @@ import com.eryansky.common.model.Datagrid;
 import com.eryansky.common.spring.SpringContextHolder;
 import com.eryansky.common.utils.IpUtils;
 import com.eryansky.common.utils.StringUtils;
+import com.eryansky.common.web.springmvc.SpringMVCUtils;
 import com.eryansky.core.aop.SecurityLogAspect;
 import com.eryansky.modules.sys.entity.Role;
 import com.eryansky.modules.sys.entity.User;
@@ -18,8 +19,6 @@ import com.eryansky.modules.sys.service.UserManager;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collections;
@@ -48,7 +47,7 @@ public class SecurityUtils {
             ResourceManager resourceManager = SpringContextHolder.getBean(ResourceManager.class);
             UserManager userManager = SpringContextHolder.getBean(UserManager.class);
             User superUser = userManager.getSuperUser();
-            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            HttpServletRequest request = SpringMVCUtils.getRequest();
             SessionInfo sessionInfo = getCurrentSessionInfo(request);
             if (sessionInfo != null && superUser != null
                     && sessionInfo.getUserId() == superUser.getId()) {// 超级用户
@@ -69,7 +68,7 @@ public class SecurityUtils {
      * @return
      */
     public static boolean isPermittedRole(String roleCode) {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        HttpServletRequest request = SpringMVCUtils.getRequest();
         SessionInfo sessionInfo = getCurrentSessionInfo(request);
         return  isPermittedRole(sessionInfo.getUserId(),roleCode);
     }
@@ -84,7 +83,7 @@ public class SecurityUtils {
         boolean flag = false;
         try {
             if(userId == null){
-                HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+                HttpServletRequest request = SpringMVCUtils.getRequest();
                 SessionInfo sessionInfo = getCurrentSessionInfo(request);
                 if(sessionInfo != null){
                     userId = sessionInfo.getUserId();
@@ -149,7 +148,7 @@ public class SecurityUtils {
      */
     public static SessionInfo getCurrentSessionInfo(HttpServletRequest request){
         if (request == null){
-            request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            request = SpringMVCUtils.getRequest();
         }
         return (SessionInfo)request.getSession().getAttribute(SecurityConstants.SESSION_SESSIONINFO);
     }

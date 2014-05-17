@@ -120,7 +120,7 @@ function showDialog(row){
         inputUrl = inputUrl+"?id="+row.id;
     }else{
         var selectedNode = organ_treegrid.treegrid('getSelected');
-        if(selectedNode){
+        if(selectedNode != undefined && selectedNode.type != undefined){
             inputUrl +="?parentOrganType="+selectedNode.type;
         }
     }

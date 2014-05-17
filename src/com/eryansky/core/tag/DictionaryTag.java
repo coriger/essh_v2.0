@@ -5,6 +5,8 @@
  */
 package com.eryansky.core.tag;
 
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 import java.io.IOException;
@@ -63,6 +65,11 @@ public class DictionaryTag extends TagSupport {
      * 是否多选 默认值:否
      */
     private boolean multiple = false;
+    /**
+     * 默认值
+     */
+    private String value = "";
+
 
 
     @Override
@@ -118,6 +125,9 @@ public class DictionaryTag extends TagSupport {
         }
         if(this.width != null){
             buffer.append(",width:'").append(this.width).append("'");
+        }
+        if(StringUtils.isNotBlank(this.value)){
+            buffer.append(",value:'").append(this.value).append("'");
         }
 
         if(!"".equals(validType)){
@@ -208,5 +218,13 @@ public class DictionaryTag extends TagSupport {
 
     public void setMultiple(boolean multiple) {
         this.multiple = multiple;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 }

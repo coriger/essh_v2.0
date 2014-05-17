@@ -40,7 +40,7 @@ public class LogAspect {
      */
 
     @Around("execution(* com.eryansky.modules.*.service..*Manager.*(..))")
-    public Object logAll(ProceedingJoinPoint point) {
+    public Object logAll(ProceedingJoinPoint point) throws Throwable {
         Object result = null;
         // 执行方法名
         String methodName = point.getSignature().getName();
@@ -57,7 +57,12 @@ public class LogAspect {
             end = System.currentTimeMillis();
 
             // 登录名
-            SessionInfo sessionInfo = SecurityUtils.getCurrentSessionInfo(null);
+            SessionInfo sessionInfo = null;
+            try {
+                sessionInfo = SecurityUtils.getCurrentSessionInfo(null);
+            } catch (Exception e) {
+                logger.error(e.getMessage());
+            }
             if (sessionInfo != null) {
                 userName = sessionInfo.getLoginName();
                 ip = sessionInfo.getIp();
@@ -67,8 +72,8 @@ public class LogAspect {
                 logger.warn("sessionInfo为空.");
             }
         } catch (Throwable e) {
-//            e.printStackTrace();
-            logger.error(e.getMessage());
+            logger.error(e.getMessage(),e);
+            throw e;
         }
         String name = null;
         // 操作范围
