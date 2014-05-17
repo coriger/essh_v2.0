@@ -114,7 +114,7 @@ public class DictionaryTag extends TagSupport {
 
         buffer.append(" data-options=\"url:'").append(contextPath).append("/sys/dictionary/")
                 .append(method)
-                .append(".action?dictionaryTypeCode=")
+                .append("?dictionaryTypeCode=")
                 .append(this.code);
         if(this.selectType !=null && !"".equals(this.selectType)){
             buffer.append("&selectType=").append(this.selectType);
